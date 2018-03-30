@@ -1,8 +1,6 @@
 <?php
 function user_display_table($atts) { 
-	$userData = get_user_data($atts);
-	foreach ($userData as $user) {
-		echo <<< EOM
+	echo <<< EOM
 <style>
 table, th, td {
 	border:0px black solid;
@@ -31,6 +29,10 @@ th, td {
     font-weight:bold;
 }
 </style>
+EOM;
+	$userData = get_user_data($atts);
+	foreach ($userData as $user) {
+		echo <<< EOM
 <div>
   <table>
 	  <tbody>
